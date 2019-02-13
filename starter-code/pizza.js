@@ -6,6 +6,10 @@ $(function () {
   $( ".btn-sauce" ).removeClass('active');              // Se elimina al principio (iteración 3)
   $( ".btn-crust" ).removeClass('active');              // Se elimina al principio (iteración 3)
   $( "strong:contains('$')" ).text('$13');              // Se carga el precio correcto inicial (iteración 5)
+  $('.sauce-white').hide();                             // Se elimina en la carga inicial (faltaba por hacer)
+  
+  /*cheese"></section>
+        <section class="sauce sauce-white"></section>*/
 
   var prices = [
     {
@@ -52,12 +56,14 @@ $(function () {
       peppe.remove();
       $('.btn-pepperonni').removeClass('active');
       subPrice ( prices, 'pepperonni' );
+      $('.pep').hide();
     }
     else {
       var newPeppe = $('<li></li>').text("$1 pepperonni");
       $('.price ul').append(newPeppe);
       $('.btn-pepperonni').addClass('active');
       addPrice ( prices, 'pepperonni' );
+      $('.pep').show();
     }
   });
 
@@ -67,12 +73,14 @@ $(function () {
       mush.remove();
       $('.btn-mushrooms').removeClass('active');
       subPrice ( prices, 'mushrooms' );
+      $('.mushroom').hide();
     }
     else {
       var newMush = $('<li></li>').text("$1 mushrooms");
       $('.price ul').append(newMush);
       $('.btn-mushrooms').addClass('active');
       addPrice ( prices, 'mushrooms' );
+      $('.mushroom').show()
     }
   });
 
@@ -82,12 +90,14 @@ $(function () {
       peppers.remove();
       $('.btn-green-peppers').removeClass('active');
       subPrice ( prices, 'green peppers' );
+      $('.green-pepper').hide();
     }
     else {
       var newPeppers = $('<li></li>').text("$1 green peppers");
       $('.price ul').append(newPeppers);
       $('.btn-green-peppers').addClass('active');
       addPrice ( prices, 'green peppers' );
+      $('.green-pepper').show();
     }
   });
 
@@ -97,12 +107,14 @@ $(function () {
       sauce.remove();
       $('.btn-sauce').removeClass('active');
       subPrice ( prices, 'white sauce' );
+      $('.sauce-white').hide();
     }
     else {
       var newSauce = $('<li></li>').text("$3 white sauce");
       $('.price ul').append(newSauce);
       $('.btn-sauce').addClass('active');
       addPrice ( prices, 'white sauce' );
+      $('.sauce-white').show();
     }
   });
 
